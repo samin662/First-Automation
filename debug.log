@@ -1,0 +1,6 @@
+[1008/172634.376:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1009/105138.033:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1009/184025.298:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1009/210022.515:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[1009/210022.517:ERROR:exception_snapshot_win.cc(99)] thread ID 81684 not found in process
+[1009/210022.517:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
