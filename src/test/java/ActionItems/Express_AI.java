@@ -28,10 +28,10 @@ public class Express_AI extends Abstract_class {
       WritableWorkbook writableFile = Workbook.createWorkbook(new File("src/main/resources/expressResults.xls"), readableFile);
       WritableSheet writableSheet = writableFile.getSheet(0);
       int rowCount = writableSheet.getRows();
-      driver.navigate().to("https://www.express.com");
-      SoftAssert softAssert = new SoftAssert();
-      softAssert.assertEquals(driver.getTitle(),"Men's and Women's Clothing");
-      Thread.sleep(2000);
+    //  driver.navigate().to("https://www.express.com");
+      //SoftAssert softAssert = new SoftAssert();
+      //softAssert.assertEquals(driver.getTitle(),"Men's and Women's Clothing");
+      //Thread.sleep(2000);
 // Create for loop
       for (int i = 1; i < rowCount; i++) {
           //Get the cell contents
@@ -115,7 +115,7 @@ Thread.sleep(2000);
       }//end of loop
       writableFile.write();
       writableFile.close();
-      softAssert.assertAll();
+     // softAssert.assertAll();
 
   } //end of test
   }// end of class
