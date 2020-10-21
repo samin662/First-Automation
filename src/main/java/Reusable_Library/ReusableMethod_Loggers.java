@@ -12,6 +12,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 
@@ -191,5 +194,23 @@ public class ReusableMethod_Loggers {
             e.printStackTrace();
         }
     }//end of screenshot method
+    //method to upload a file(image,doc, etc...) from your computer by using robot command
+    public static void uploadFile(String filePath) throws AWTException {
+        StringSelection ss = new StringSelection(filePath);
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss,null);
+        Robot robot=new Robot();
+        robot.delay(1000);
+        //This step clicks on 'Browse' button
+        robot.keyPress(KeyEvent.VK_ENTER);
+        //This step clicks on 'File name' textbox
+        robot.keyPress(KeyEvent.VK_ENTER);
+        //Next two steps does "Ctrl+V" and paste the filepath
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        //This step attached the file and clicks on 'Open'
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyPress(KeyEvent.VK_ENTER);
+    }//end of upload file using Robot command
+
 
 }//end of java class
